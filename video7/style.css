@@ -1,0 +1,178 @@
+/* Universal Reset & Google Fonts link karne ki zarurat nahi, standard clean font use kiya hai */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Background me gradient aur center layout */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Glassmorphism Effect wala Premium Form Container */
+form {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 480px;
+    width: 100%;
+}
+
+/* Heading Styling: Gradient Text Effect */
+h1 {
+    background: linear-gradient(to right, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Har section ke beech gap */
+form > div {
+    margin-bottom: 24px;
+}
+
+/* Labels: Modern Small Caps Look */
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Inputs, Textarea aur Dropdown ka Modern Dark Look */
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #f8fafc;
+    background-color: #1e293b;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Input ke placeholders ka color */
+::placeholder {
+    color: #64748b;
+}
+
+/* Focus State: Neon Purple Glow Effect */
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    background-color: #0f172a;
+    outline: none;
+}
+
+/* Radio & Checkbox Wrapper Layout */
+form > div:nth-of-type(2), 
+form > div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Inner Labels Adjustment */
+form > div:nth-of-type(2) label,
+form > div:nth-of-type(3) label {
+    display: inline-block;
+    margin-bottom: 0;
+    cursor: pointer;
+    text-transform: none;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Gender ka heading label alag line me */
+form > div:nth-of-type(2) > label:first-child {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Custom Stylish Radio aur Checkbox Apperance */
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #475569;
+    border-radius: 6px;
+    background-color: #1e293b;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease;
+}
+
+input[type="radio"] {
+    border-radius: 50%; /* Radio ko gol rakhne ke liye */
+}
+
+/* Radio/Checkbox Checked State */
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    border-color: #6366f1;
+    background-color: #6366f1;
+}
+
+/* Checked hone par andar chota dot/tick dikhane ke liye */
+input[type="radio"]::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s transform ease-in-out;
+    background-color: #fff;
+}
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+/* Textarea customization */
+textarea {
+    resize: none; /* Khichkar bada karne wala jhanjhat khatam */
+    min-height: 100px;
+}
+
+/* Dropdown (Select) options background fix */
+select option {
+    background-color: #1e293b;
+    color: #f8fafc;
+}

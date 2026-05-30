@@ -1,0 +1,262 @@
+/* Modern Video & Audio Player Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+    color: #1e2a3e;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Main content container - centers and limits width */
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Headings Styling */
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, #1e2a3e, #2c3e50);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+}
+
+h2, h3 {
+    font-weight: 600;
+    margin: 2rem 0 1.25rem 0;
+    padding-left: 1rem;
+    border-left: 5px solid #3498db;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* VIDEO CONTAINER (first div after h3) */
+body > div:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.8rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    padding: 1.5rem;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin: 1rem 0 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Video Player Styling */
+body > div:first-of-type video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: #0f172a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+body > div:first-of-type video:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(52, 152, 219, 0.5);
+}
+
+/* Video focus outline for accessibility */
+body > div:first-of-type video:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* AUDIO CONTAINER (second div after h2) */
+body > div:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 28px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* Audio Player Styling */
+body > div:last-of-type audio {
+    flex: 1 1 280px;
+    min-width: 240px;
+    width: auto;
+    background: #f8fafc;
+    border-radius: 60px;
+    padding: 0.6rem 0.8rem;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+body > div:last-of-type audio:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    border-color: #cbd5e1;
+}
+
+body > div:last-of-type audio:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 3px;
+}
+
+/* Custom audio progress & controls (subtle enhancements) */
+audio::-webkit-media-controls-panel {
+    background-color: #f1f5f9;
+    border-radius: 40px;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #3498db;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Responsive design for tablets and mobiles */
+@media (max-width: 768px) {
+    body {
+        padding: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    body > div:first-of-type {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    body > div:first-of-type video {
+        height: 190px;
+    }
+    
+    body > div:last-of-type {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    
+    body > div:last-of-type audio {
+        min-width: 200px;
+        flex: 1 1 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.8rem;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    body > div:first-of-type {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    body > div:first-of-type video {
+        height: 200px;
+    }
+    
+    body > div:last-of-type {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    body > div:last-of-type audio {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Smooth scroll & subtle effects */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Additional hover micro-interaction for video container */
+body > div:first-of-type:hover video:not(:hover) {
+    opacity: 0.92;
+    transition: opacity 0.2s;
+}
+
+/* Nice spacing between sections */
+h2 {
+    margin-top: 2rem;
+}
+
+/* Volume / control bar color tweak for modern browsers */
+video::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-volume-slider {
+    background-color: #3498db;
+    border-radius: 20px;
+}
+
+/* Fallback for firefox - consistent styling */
+@supports not (backdrop-filter: blur(2px)) {
+    body > div:first-of-type {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    body > div:last-of-type {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}

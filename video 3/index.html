@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>लॉगिन पेज</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>लॉगिन करें</h2>
+        <form action="login_process.php" method="POST">
+            <div class="input-group">
+                <label for="username">यूज़रनेम या ईमेल</label>
+                <input type="text" id="username" name="username" required placeholder="अपना ईमेल दर्ज करें">
+            </div>
+            <div class="input-group">
+                <label for="password">पासवर्ड</label>
+                <input type="password" id="password" name="password" required placeholder="पासवर्ड दर्ज करें">
+            </div>
+            <button type="submit" class="login-btn">लॉगिन</button>
+            <p class="signup-link">खाता नहीं है? <a href="#">साइन अप करें</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* element selector */
+        div {
+            /* background-color: red; */
+        }
+
+        /* class selector */
+        .red {
+            background-color: red;
+        }
+
+        /* id selector */
+        #banti {
+            background-color: aqua;
+        }
+
+        /* child selectors */
+        div>p {
+            background-color: chartreuse;
+            color: brown;
+        }
+
+        /* decendant selector */
+        div p {
+            background-color: chartreuse;
+        }
+
+        /* universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* pseudo selector */
+        a:visited {
+            color: #f9721f;
+        }
+
+        a :link {
+            color: #16bf1b;
+        }
+
+        a:active {
+            background-color: red;
+        }
+
+        a:hover {
+            background-color: yellow;
+        }
+        p:first-child{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="alok">
+        <p>this is selector</p>
+        <p> i ama here</p>
+    </main>
+    <div class="red">
+        i am a div
+    </div>
+    <div id="banti">
+        yes i am here
+        <article>
+            <p>i am banti boss</p>
+        </article>
+    </div>
+    <a href="https:/www.facebook.com">open facebook</a>
+    <a href="https://www.google.com">Google</a>
+</body>
+
+</html>
